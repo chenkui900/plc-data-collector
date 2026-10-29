@@ -1,5 +1,7 @@
 # Plc_Aotu 工业数据采集平台
 
+> 原版来源于 https://github.com/agentthink/plc-data-collector 。根据本人的使用需求，增加了设备驱动，将配置文件从 json 改为 sqlite。
+
 前后端一体的 PLC 数据采集、实时展示和数据推送系统。后端为 Express + WebSocket 常驻服务，负责按设备轮询采集、缓存实时值、落盘 JSON 并向外推送；前端为 React + Ant Design 单页应用，负责设备/点位/推送通道的配置与实时监控。
 
 ## 技术栈
