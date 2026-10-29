@@ -1,0 +1,10 @@
+{
+  "name": "plc-aotu-server",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev:server": "cross-env NODE_OPTIONS=--experimental-sqlite tsx watch server/src/index.ts",
+    "start": "tsx src/index.ts"
+  }
+}

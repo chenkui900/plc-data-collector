@@ -1,0 +1,21 @@
+[
+  {
+    "id": "push-mva1x0f5oh7v",
+    "name": "Data Logging",
+    "type": "mysql",
+    "enabled": true,
+    "tagFilter": "all",
+    "pushInterval": 100,
+    "status": "running",
+    "dbHost": "127.0.0.1",
+    "dbPort": 3306,
+    "database": "Data_Logging",
+    "dbUsername": "root",
+    "dbPassword": "root",
+    "table": "Data_Logging",
+    "createdAt": "2026-10-16 04:29:04",
+    "updatedAt": "2026-10-17 05:04:43",
+    "lastActiveAt": "2026-10-17 05:04:43",
+    "lastPush": "2026-10-17 05:04:43"
+  }
+]

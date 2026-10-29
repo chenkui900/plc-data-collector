@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "host": "172.19.29.6",
+  "port": 1433,
+  "user": "admin",
+  "password": "zodo!@123.com",
+  "database": "ZODO_MesPartsConnection",
+  "table": "MesDownPlan",
+  "cacheSeconds": 300
+}

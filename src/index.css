@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans SC', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  background: #f0f2f5;
+}
+
+/* ===== 主布局 ===== */
+.app-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-sider {
+  background: #001529 !important;
+  overflow: hidden;
+}
+
+.app-sider .ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.app-logo-icon {
+  font-size: 28px;
+  color: #1890ff;
+  flex-shrink: 0;
+}
+
+.app-logo-text {
+  margin-left: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.app-logo-title {
+  color: #fff !important;
+  font-size: 18px !important;
+  display: block;
+  line-height: 1.3;
+}
+
+.app-logo-sub {
+  color: rgba(255, 255, 255, 0.55) !important;
+  font-size: 13px !important;
+}
+
+.app-menu {
+  border-right: 0 !important;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.app-menu .ant-menu-item {
+  font-size: 16px !important;
+}
+
+.app-main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 0 24px !important;
+  height: 60px !important;
+  line-height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-shrink: 0;
+}
+
+.app-header-title {
+  font-size: 20px;
+}
+
+.app-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 15px;
+}
+
+.app-header-time {
+  font-size: 15px;
+}
+
+.app-content {
+  flex: 1;
+  overflow: hidden;
+  padding: 16px;
+  min-height: 0;
+}
+
+/* ===== 页面容器 ===== */
+.page-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+}
+
+.page-card .ant-card-head-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.page-card .ant-card-body {
+  flex: 1;
+  min-height: 0;
+}
+
+.page-toolbar {
+  flex-shrink: 0;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.table-wrapper {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.table-wrapper .ant-table-wrapper,
+.table-wrapper .ant-spin-nested-loading,
+.table-wrapper .ant-spin-container {
+  height: 100%;
+}
+
+.table-wrapper .ant-table {
+  height: 100%;
+}
+
+.table-wrapper .ant-table-container {
+  height: 100%;
+}
+
+.table-wrapper .ant-table-body {
+  overflow: auto !important;
+}
+
+.table-wrapper .ant-table-pagination {
+  margin: 12px 0 0 !important;
+}
+
+/* ===== 表格单元格 ===== */
+.cell-text {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cell-text .cell-desc {
+  display: block;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.45);
+  margin-top: 2px;
+}
+
+.mono-text {
+  font-size: 15px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: nowrap;
+}
+
+.value-text {
+  color: #1677ff;
+  font-size: 16px;
+}
+
+.action-link {
+  font-size: 16px !important;
+  padding-inline: 4px !important;
+}
+
+.ant-table-cell {
+  font-size: 16px;
+}
+
+.ant-table-thead > tr > th {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+
+.ant-tag {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 0 8px;
+}
+
+/* ===== Dashboard ===== */
+.dashboard-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.stat-card-info {
+  min-width: 0;
+}
+
+.stat-card-label {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+}
+
+.stat-card-value {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.dashboard-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.dashboard-panel {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  min-height: 0;
+}
+
+.dashboard-panel-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.dashboard-panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.dashboard-panel-body {
+  flex: 1;
+  overflow-y: auto; /* 让外层容器滚动 */
+  min-height: 0;
+  position: relative;
+}
+
+/* 让表格的表头在滚动时吸顶 */
+.dashboard-panel-body .ant-table-thead > tr > th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard-panel-body .ant-table-wrapper {
+  height: 100%;
+}
+
+.dashboard-panel-body .ant-table-body {
+  overflow-y: auto !important;
+}
+
+.log-list {
+  height: 100%;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.log-item {
+  padding: 10px 18px;
+  border-bottom: 1px solid #fafafa;
+  font-size: 14px;
+}
+
+.log-item:hover {
+  background: #fafafa;
+}
+
+.log-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.log-item-msg {
+  color: rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* ===== 协议页 ===== */
+.protocol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.protocol-card {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fafbfc;
+  min-height: 168px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.protocol-card:hover {
+  border-color: #d6e4ff;
+  box-shadow: 0 6px 16px rgba(22, 119, 255, 0.08);
+  background: #fff;
+}
+
+.protocol-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.protocol-card-title {
+  font-size: 17px !important;
+}
+
+.protocol-card-desc {
+  margin: 0 !important;
+  font-size: 14px !important;
+  flex: 1;
+}
+
+.protocol-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.protocol-card-meta .meta-label {
+  color: rgba(0, 0, 0, 0.45);
+  margin-right: 8px;
+}
+
+.protocol-card-meta .meta-value {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* ===== 设置页 ===== */
+.settings-page {
+  height: 100%;
+  overflow: hidden;
+}
+
+.settings-page .page-card .ant-card-body {
+  overflow-y: auto !important;
+}
+
+/* ===== 日志 ===== */
+.log-row-error {
+  background: #fff2f0 !important;
+}
+
+.log-row-warn {
+  background: #fffbe6 !important;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 1200px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .app-content {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "globalPollInterval": 100,
+  "maxConcurrent": 10,
+  "logLevel": "info",
+  "logRetention": 7,
+  "maxLogEntries": 1000,
+  "coldDataDays": 10,
+  "autoReconnect": true,
+  "reconnectInterval": 5000,
+  "webPort": 5100,
+  "enableCors": true
+}

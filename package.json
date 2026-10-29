@@ -1,0 +1,49 @@
+{
+  "name": "plc-aotu",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "cross-env NODE_OPTIONS=--experimental-sqlite tsx watch server/src/index.ts",
+    "dev:web": "vite",
+    "server": "cross-env NODE_OPTIONS=--experimental-sqlite tsx server/src/index.ts",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "oxlint",
+    "import-json": "cross-env NODE_OPTIONS=--experimental-sqlite tsx server/src/import-json.ts"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.3.4",
+    "antd": "^6.6.4",
+    "cors": "^2.8.6",
+    "dayjs": "^1.11.23",
+    "ethernet-ip": "^2.0.0",
+    "express": "^5.2.1",
+    "modbus-serial": "^8.0.25",
+    "mqtt": "^5.16.0",
+    "mssql": "^12.7.12",
+    "mysql2": "^3.24.4",
+    "node-opcua": "^2.186.17",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4",
+    "serialport": "^13.0.0",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.13.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.2.4",
+    "cross-env": "^7.0.3",
+    "oxlint": "^1.83.0",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3",
+    "vite": "^5.4.11"
+  }
+}
